@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul>
+        <li id="fruit" >Mango</li>
+        <li class="orange">Orange</li>
+        <li>Banana</li>
+        <li>Apple</li>
+    </ul>
+
+</body>
+<script>
+    // 1. selecting and manipulating elements
+
+    const fruit = document.getElementById("fruit");
+    console.log(fruit.innerHTML);
+    setTimeout(function() {
+        fruit.innerText = "PineApple";
+        console.log(fruit.innerHTML);
+    }, 2000);
+
+    // const orange = document.getElementsByClassName("orange")[0]; // It returns HTMLCollection
+    const orange = document.querySelector(".orange");
+    orange.style.backgroundColor = "orange";
+</script>
+</html>

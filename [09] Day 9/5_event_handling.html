@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>click to register</p>
+    <button class="register">register</button>
+</body>
+<script>
+    const regBtn = document.querySelector(".register");
+    const paraElement = document.querySelector("p");
+    regBtn.addEventListener("click", function() {
+        paraElement.innerText = "Registration Successful :)";
+    });
+
+    paraElement.addEventListener("mouseover", function() {
+        paraElement.style.border = "1px solid red";
+    });
+
+    paraElement.addEventListener("mouseout", function() {
+        paraElement.style.border = "none";
+    });
+</script>
+</html>

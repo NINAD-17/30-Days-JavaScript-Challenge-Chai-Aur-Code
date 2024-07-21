@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .heading {
+            text-align: center;
+            color: #2d3ce4;
+        }
+
+        .description {
+            font-weight: 400;
+            color: cornflowerblue;
+        }
+    </style>
+</head>
+<body>
+    <img src="#" alt="">
+    <a>Hello</a>
+
+    <h1>SΛMSUNG Galaxy</h1>
+    <p class="description">We'll fly to our galaxy!</p>
+</body>
+<script>
+    const anchor = document.querySelector("a");
+    console.log(anchor.getAttribute("href"));
+
+    setTimeout(function() {
+        anchor.setAttribute("href", "https://google.com");
+        console.log(anchor.getAttribute("href"));
+    }, 1000);
+
+    // add or remove css class
+    const header = document.querySelector("h1");
+    const description = document.querySelector(".description");
+    setTimeout(function() {
+        header.classList.add("heading");
+        description.classList.remove("description");
+    }, 1000);
+
+</script>
+</html>
