@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="#">
+        <input class="name" type="text">
+        <input class="email" type="text">
+        <button type="submit">Submit</button>
+    </form>
+
+    <br>
+    <label for="chaebols">Choose a chaebol: </label>
+    <select name="chaebols" id="chaebols">
+        <option value="select">select</option>
+        <option value="samsung">Samsung Group</option>
+        <option value="hyundai">Hyundai Group</option>
+        <option value="lg">LG Group</option>
+        <option value="sk">SK Group</option>
+        <option value="lotte">Lotte Group</option>
+    </select>
+
+    <p></p>
+</body>
+<script>
+    const name = document.querySelector(".name");
+    const email = document.querySelector(".email");
+
+    const form = document.querySelector("form");
+    form.addEventListener("submit", function(event) {
+        event.preventDefault();
+        console.log(name.value, email.value);
+    });
+
+    const select = document.querySelector("#chaebols");
+    const p = document.querySelector("p");
+    select.addEventListener("change", function(event) {
+        console.log(event.target.value);
+        p.innerHTML += event.target.value + "<br>";
+    });
+</script>
+</html>

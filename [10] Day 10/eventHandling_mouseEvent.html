@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .imgDiv {
+            width: 700px;
+            padding-top: 20px;
+            border-radius: 20px;
+            border: 2px dotted black;
+            cursor: pointer;
+        }
+
+        .img {
+            width: 700px;
+            object-fit: cover;
+            border-radius: 20px;
+        }
+
+        .imgNone {
+            visibility: hidden;
+        }
+
+        button {
+            margin-bottom: 10px;
+        }
+
+        .galaxy {
+            background-color: black;
+            color: white;
+            cursor: pointer;
+        }
+
+        span {
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <p>Click to register for Galaxy Unpacked 2024</p>
+    <button>Click</button>
+
+    <div class="imgDiv">
+        <img class="img" src="Samsung-Mobile-Open-Always-Wins-TOMORROW-X-TOGETHER-Brand-Anthem_dl1.jpg" alt="">
+    </div>
+</body>
+<script>
+    const p = document.querySelector("p");
+    const button = document.querySelector("button");
+
+    button.addEventListener("click", function() {
+        // setTimeout(function() {
+            p.innerHTML = "<h2> successfully registered for <span class='galaxy'> Galaxy Unpacked 2024 </h2>";
+        // }, 500);
+
+        const span = document.querySelector("span");
+        console.log(span);
+        span.addEventListener("mouseover", function() {
+            span.classList.remove("galaxy");
+        });
+
+        span.addEventListener("mouseout", function() {
+            span.classList.add("galaxy");
+        });
+    });
+
+    let isVisible = true;
+    const img = document.querySelector("img");
+    const imgDiv = document.querySelector(".imgDiv");
+
+    imgDiv.addEventListener("dblclick", function() {
+        isVisible? img.classList.add("imgNone"): img.classList.remove("imgNone");
+        isVisible = !isVisible;
+    });
+
+    
+</script>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <button>button 1</button>
+        <button>button 2</button>
+        <button>button 3</button>
+        <button>button 4</button>
+    </div>
+</body>
+<script>
+    const div = document.querySelector("div");
+    div.addEventListener("click", event => {
+        if(event.target.tagName === "button");
+        console.log(event.target.innerText);
+    });
+
+    setTimeout(function() {
+        const newBtn = document.createElement("button");
+        newBtn.innerText = "button 5";
+        div.appendChild(newBtn);
+    }, 2000);
+</script>
+</html>
